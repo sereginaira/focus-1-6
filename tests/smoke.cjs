@@ -1,0 +1,24 @@
+const {chromium}=require('C:/Users/despa/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {pathToFileURL}=require('node:url');
+const path=require('node:path');
+const fs=require('node:fs');
+(async()=>{
+ const browser=await chromium.launch({channel:'msedge',headless:true});
+ const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1,reducedMotion:'reduce'});
+ page.on('pageerror',e=>console.log('PAGE ERROR',e.message));
+ page.on('console',m=>{if(m.type()==='error')console.log('CONSOLE ERROR',m.text());});
+ await page.goto(pathToFileURL(path.resolve('index.html')).href);
+ await page.screenshot({path:'tests/home-desktop.png',fullPage:true});
+ console.log(await page.evaluate(()=>({title:document.title,vocab:GameData.vocabulary.length,questions:[...GameData.grammarQuestions,...GameData.expressionQuestions,...GameData.sportQuestions].length,images:[...document.images].filter(i=>!i.complete||!i.naturalWidth).map(i=>i.src),overflow:document.documentElement.scrollWidth>innerWidth})));
+ await page.locator('[data-action=start]').click();
+ await page.locator('#hero-name').fill('Аня');
+ await page.locator('#name-form .button').click();
+ await page.screenshot({path:'tests/map-desktop.png',fullPage:true});
+ await page.locator('[data-action=intro][data-id="1"]').click();
+ await page.locator('[data-action=begin]').click();
+ await page.screenshot({path:'tests/mission-desktop.png',fullPage:true});
+ await page.setViewportSize({width:390,height:844});
+ await page.screenshot({path:'tests/mission-mobile.png',fullPage:true});
+ console.log('mobile overflow',await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,width:innerWidth})));
+ await browser.close();
+})().catch(e=>{console.error(e);process.exitCode=1;});
