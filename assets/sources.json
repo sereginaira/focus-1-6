@@ -1,0 +1,132 @@
+[
+  {
+    "source": "1-Фото-1.jpg",
+    "asset": "textbook-vocabulary.jpg",
+    "original": [
+      690,
+      928
+    ],
+    "size": [
+      690,
+      928
+    ],
+    "bytes": 153805
+  },
+  {
+    "source": "2-Фото-2.jpg",
+    "asset": "textbook-expressions.jpg",
+    "original": [
+      350,
+      243
+    ],
+    "size": [
+      350,
+      243
+    ],
+    "bytes": 24555
+  },
+  {
+    "source": "3-Фото-3.jpg",
+    "asset": "ladybug.png",
+    "original": [
+      405,
+      758
+    ],
+    "size": [
+      404,
+      757
+    ],
+    "bytes": 189541
+  },
+  {
+    "source": "4-Фото-4.jpg",
+    "asset": "duo.jpg",
+    "original": [
+      375,
+      375
+    ],
+    "size": [
+      375,
+      375
+    ],
+    "bytes": 39012
+  },
+  {
+    "source": "5-Фото-5.jpg",
+    "asset": "marinette.jpg",
+    "original": [
+      337,
+      593
+    ],
+    "size": [
+      337,
+      593
+    ],
+    "bytes": 36032
+  },
+  {
+    "source": "6-Фото-6.jpg",
+    "asset": "ladybug-victory.jpg",
+    "original": [
+      402,
+      497
+    ],
+    "size": [
+      402,
+      497
+    ],
+    "bytes": 47957
+  },
+  {
+    "source": "7-Фото-7.jpg",
+    "asset": "cat-noir.jpg",
+    "original": [
+      447,
+      447
+    ],
+    "size": [
+      447,
+      447
+    ],
+    "bytes": 37704
+  },
+  {
+    "source": "8-Фото-8.jpg",
+    "asset": "cat-attack.jpg",
+    "original": [
+      1280,
+      720
+    ],
+    "size": [
+      1280,
+      720
+    ],
+    "bytes": 110466
+  },
+  {
+    "source": "9-Фото-9.jpg",
+    "asset": "reaction.jpg",
+    "original": [
+      554,
+      554
+    ],
+    "size": [
+      554,
+      554
+    ],
+    "bytes": 34777
+  },
+  {
+    "source": "10-Фото-10.jpg",
+    "asset": "hawk-moth.jpg",
+    "original": [
+      549,
+      364
+    ],
+    "size": [
+      549,
+      364
+    ],
+    "bytes": 27637
+  }
+]
